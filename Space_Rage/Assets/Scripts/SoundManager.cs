@@ -9,7 +9,7 @@ public enum SoundType
     LAND,
     ALIENS,
     DEATH,
-    MUSIC
+    
 
 }
 
