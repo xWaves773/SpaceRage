@@ -1,21 +1,23 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(CharacterController))]
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement")]
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private float jumpHeight = 1.5f;
-    [SerializeField] private float gravity = -9.81f;
+    [SerializeField] private LayerMask groundMask = ~0;
+    [SerializeField] private float groundCheckDistance = 0.6f;
 
-    private CharacterController controller;
+    private Rigidbody rb;
     private Vector2 moveInput;
-    private Vector3 velocity;
+    private bool jumpRequested;
 
     void Awake()
     {
-        controller = GetComponent<CharacterController>();
+        rb = GetComponent<Rigidbody>();
+        rb.interpolation = RigidbodyInterpolation.Interpolate;
+        rb.constraints = RigidbodyConstraints.FreezeRotation;
     }
 
     public void OnMove(InputValue value)
@@ -25,22 +27,31 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnJump(InputValue value)
     {
-        if (value.Get<float>() > 0.5f && controller.isGrounded)
-        {
-            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-        }
+        if (value.Get<float>() > 0.5f)
+            jumpRequested = true;
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        Vector3 move = new Vector3(moveInput.x, 0f, moveInput.y);
-        move = transform.TransformDirection(move);
-        controller.Move(move * moveSpeed * Time.deltaTime);
+        Vector3 desiredLocal = new Vector3(moveInput.x, 0f, moveInput.y);
+        Vector3 desiredWorld = transform.TransformDirection(desiredLocal) * moveSpeed;
 
-        if (controller.isGrounded && velocity.y < 0f)
-            velocity.y = -2f;
+        Vector3 vel = rb.linearVelocity;
+        vel.x = desiredWorld.x;
+        vel.z = desiredWorld.z;
+        rb.linearVelocity = vel;
 
-        velocity.y += gravity * Time.deltaTime;
-        controller.Move(velocity * Time.deltaTime);
+        bool isGrounded = Physics.Raycast(transform.position, Vector3.down, groundCheckDistance, groundMask);
+
+        //jump
+        if (jumpRequested && isGrounded)
+        {
+            float v = Mathf.Sqrt(jumpHeight * -2f * Physics.gravity.y);
+            Vector3 v2 = rb.linearVelocity;
+            v2.y = v;
+            rb.linearVelocity = v2;
+        }
+
+        jumpRequested = false;
     }
 }
