@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 54628c570287d08469b085402939c388
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Ruigslay
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: ac22e9f6f0a3b1c4f8cd8f2ebdb49cb7, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
