@@ -23,11 +23,13 @@ public class PlatformMove : MonoBehaviour
         {
             while ((targetposition - platform.transform.position).sqrMagnitude > 0.01f)
             {
-                platform.transform.position = Vector3.MoveTowards(platform.transform.position, targetposition, speed * Time.deltaTime);
+                platform.transform.position = Vector3.MoveTowards(platform.transform.position, 
+                    targetposition, speed * Time.deltaTime);
                 yield return null;
             }
 
-            targetposition = targetposition == PointA.transform.position ? PointB.transform.position : PointA.transform.position;
+            targetposition = targetposition == PointA.transform.position 
+                ? PointB.transform.position : PointA.transform.position;
 
             yield return new WaitForSeconds(delay);
         }
