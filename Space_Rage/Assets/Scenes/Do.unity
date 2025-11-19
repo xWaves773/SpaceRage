@@ -253,7 +253,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5687a197a6c52004586e793d5afa07a3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.48
+      value: 0.628
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5687a197a6c52004586e793d5afa07a3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -297,7 +297,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5687a197a6c52004586e793d5afa07a3, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -638,11 +638,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!4 &507077898 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5687a197a6c52004586e793d5afa07a3, type: 3}
-  m_PrefabInstance: {fileID: 1034067978}
-  m_PrefabAsset: {fileID: 0}
 --- !u!136 &507077899
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -762,7 +757,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -815,8 +810,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 555c0c4cd67912f4eb1d33742019ca91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChainRenderer
-  playerA: {fileID: 1023272079}
-  playerB: {fileID: 507077898}
+  playerA: {fileID: 1085309783}
+  playerB: {fileID: 1111980300}
 --- !u!4 &843745376
 Transform:
   m_ObjectHideFlags: 0
@@ -1273,11 +1268,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!4 &1023272079 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5687a197a6c52004586e793d5afa07a3, type: 3}
-  m_PrefabInstance: {fileID: 71152349}
-  m_PrefabAsset: {fileID: 0}
 --- !u!136 &1023272080
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1517,7 +1507,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5687a197a6c52004586e793d5afa07a3, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1596,7 +1586,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &1085309776
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1831,7 +1821,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!54 &1111980294
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2034,7 +2024,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -9, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1190303984
@@ -2091,7 +2081,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 1624565776}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
@@ -2103,7 +2093,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1190303985
 MonoBehaviour:
@@ -2353,7 +2343,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
