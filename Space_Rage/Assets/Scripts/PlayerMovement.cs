@@ -1,3 +1,4 @@
+using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -50,6 +51,7 @@ public class PlayerMovement : MonoBehaviour
             Vector3 v2 = rb.linearVelocity;
             v2.y = v;
             rb.linearVelocity = v2;
+            SoundManager.PlaySound(SoundType.JUMP);
         }
 
         jumpRequested = false;
