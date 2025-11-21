@@ -151,7 +151,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63e061d023e30e14e9c44bc8f6753758, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Checkpoint
-  startpos: {x: 0, y: 0, z: 0}
 --- !u!65 &34643826
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -238,8 +237,8 @@ Transform:
   m_GameObject: {fileID: 34643824}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.271, y: 0.618, z: -31.321}
-  m_LocalScale: {x: 1, y: 0.2, z: 1}
+  m_LocalPosition: {x: -0.271, y: 1.05, z: -31.321}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -514,7 +513,7 @@ PrefabInstance:
     - target: {fileID: -8180504655888308272, guid: 78da7b61c0f14d448bb9fabee035f0e8, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: e3b07516e326563438b64a2370936720, type: 2}
+      objectReference: {fileID: 2100000, guid: c42c9d7b802dad64798e005d25e9faea, type: 2}
     - target: {fileID: 919132149155446097, guid: 78da7b61c0f14d448bb9fabee035f0e8, type: 3}
       propertyPath: m_Name
       value: astronaut
@@ -522,7 +521,7 @@ PrefabInstance:
     - target: {fileID: 3912626196425907143, guid: 78da7b61c0f14d448bb9fabee035f0e8, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: e3b07516e326563438b64a2370936720, type: 2}
+      objectReference: {fileID: 2100000, guid: c42c9d7b802dad64798e005d25e9faea, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2182,7 +2181,7 @@ PrefabInstance:
     - target: {fileID: -8180504655888308272, guid: 78da7b61c0f14d448bb9fabee035f0e8, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: e3b07516e326563438b64a2370936720, type: 2}
+      objectReference: {fileID: 2100000, guid: d3929f6757cf0444385061aedf46d83e, type: 2}
     - target: {fileID: 919132149155446097, guid: 78da7b61c0f14d448bb9fabee035f0e8, type: 3}
       propertyPath: m_Name
       value: astronaut (1)
@@ -2190,7 +2189,7 @@ PrefabInstance:
     - target: {fileID: 3912626196425907143, guid: 78da7b61c0f14d448bb9fabee035f0e8, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: e3b07516e326563438b64a2370936720, type: 2}
+      objectReference: {fileID: 2100000, guid: 4d5f5d3eb0f36944ca1957e6265653cc, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
