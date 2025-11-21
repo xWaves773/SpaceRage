@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
-    private Vector3 startpos;
+    public Vector3 startpos;
 
     private void Start()
     {
