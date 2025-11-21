@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerChain : MonoBehaviour
 {
     public Rigidbody otherPlayer;
-    public float maxDistance = 3f;
+    public float maxDistance = 6f;
     public float springForce = 50f;
 
     void Start()
